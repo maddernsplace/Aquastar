@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plumbing Services | AquaStar Plumbing Sutherland Shire NSW</title>
+<meta name="description" content="Full range of plumbing services in Sutherland Shire NSW — emergency plumbing, blocked drains, hot water, gas fitting, bathroom renovations, CCTV drain camera & more.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://aquastarplumbing.com.au/services.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --blue-deep:   #0b2e4e;
+    --blue-mid:    #1a5276;
+    --blue-light:  #2980b9;
+    --blue-pale:   #aed6f1;
+    --aqua:        #1abc9c;
+    --aqua-dark:   #148f77;
+    --aqua-pale:   #a2d9ce;
+    --orange:      #e67e22;
+    --orange-dark: #ca6f1e;
+    --cream:       #f4f8fb;
+    --white:       #ffffff;
+    --text-dark:   #1a2a3a;
+    --text-mid:    #4a5568;
+    --text-light:  #718096;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Montserrat', sans-serif; background: var(--white); color: var(--text-dark); overflow-x: hidden; }
+
+  /* NAV */
+  .topbar {
+    background: var(--blue-deep); color: rgba(255,255,255,0.75);
+    font-size: 0.76rem; letter-spacing: 0.05em;
+    padding: 0.4rem 4rem;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .topbar a { color: var(--aqua); text-decoration: none; }
+  .topbar-left { display: flex; gap: 2rem; }
+  .topbar-right { display: flex; gap: 1.5rem; align-items: center; }
+  .emergency-badge { background: var(--orange); color: #fff; padding: 0.2rem 0.7rem; border-radius: 2px; font-weight: 700; font-size: 0.7rem; letter-spacing: 0.08em; }
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 4rem; height: 70px;
+    background: var(--white); box-shadow: 0 2px 20px rgba(11,46,78,0.1);
+    border-bottom: 3px solid var(--aqua);
+  }
+  .logo {
+    font-family: 'Montserrat', sans-serif; font-size: 1.4rem; font-weight: 800;
+    color: var(--blue-deep); text-decoration: none; letter-spacing: -0.02em;
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .logo-icon { width: 36px; height: 36px; background: var(--aqua); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.1rem; }
+  .logo span { color: var(--aqua); }
+  .nav-links { display: flex; gap: 0; list-style: none; }
+  .nav-links a {
+    color: var(--text-dark); text-decoration: none;
+    font-size: 0.82rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase;
+    padding: 0 1.2rem; height: 70px; display: flex; align-items: center;
+    border-bottom: 3px solid transparent; margin-bottom: -3px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+  .nav-links a:hover, .nav-links a.active { color: var(--blue-mid); border-color: var(--aqua); }
+  .nav-links li { position: relative; }
+  .nav-cta { background: var(--orange) !important; color: #fff !important; border-radius: 4px; padding: 0.6rem 1.5rem !important; height: auto !important; border: none !important; margin: auto 0 !important; }
+  .nav-cta:hover { background: var(--orange-dark) !important; }
+  .nav-dropdown {
+    position: absolute; top: 100%; left: 0; background: var(--white);
+    border: 1px solid rgba(11,46,78,0.08); border-top: 3px solid var(--aqua);
+    border-radius: 0 0 6px 6px; min-width: 220px; padding: 0.5rem 0; list-style: none;
+    opacity: 0; visibility: hidden; transform: translateY(-6px);
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+    z-index: 200; box-shadow: 0 8px 24px rgba(11,46,78,0.12);
+  }
+  .nav-dropdown li a { display: block; padding: 0.6rem 1.2rem; font-size: 0.8rem; height: auto; border: none !important; margin: 0 !important; white-space: nowrap; color: var(--text-mid); }
+  .nav-dropdown li a:hover { background: var(--cream); color: var(--blue-mid); }
+  .nav-has-dropdown:hover .nav-dropdown, .nav-has-dropdown:focus-within .nav-dropdown { opacity: 1; visibility: visible; transform: translateY(0); }
+  .nav-has-dropdown > a::after { content: ' ▾'; font-size: 0.65rem; opacity: 0.6; }
+  .nav-toggle { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 4px; }
+  .nav-toggle span { display: block; width: 24px; height: 2px; background: var(--blue-deep); border-radius: 2px; }
+
+  /* PAGE HEADER */
+  .page-header {
+    background: linear-gradient(135deg, var(--blue-deep), var(--blue-mid));
+    padding: 5rem 4rem 4rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .page-header::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 70% 50%, rgba(26,188,156,0.15) 0%, transparent 60%);
+  }
+  .page-header-label {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--aqua); margin-bottom: 1rem;
+  }
+  .page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2rem, 4vw, 3rem); color: #fff; margin-bottom: 1rem; position: relative;
+  }
+  .page-header h1 em { color: var(--aqua); font-style: italic; }
+  .page-header p { font-size: 1rem; color: rgba(255,255,255,0.7); max-width: 560px; margin: 0 auto; line-height: 1.8; position: relative; }
+  .page-header-waves { position: absolute; bottom: -2px; left: 0; right: 0; height: 50px; }
+
+  /* BREADCRUMB */
+  .breadcrumb {
+    background: var(--cream); padding: 0.8rem 4rem;
+    font-size: 0.78rem; color: var(--text-light);
+    border-bottom: 1px solid rgba(11,46,78,0.06);
+  }
+  .breadcrumb a { color: var(--blue-mid); text-decoration: none; }
+  .breadcrumb a:hover { text-decoration: underline; }
+
+  /* SECTION COMMON */
+  section { padding: 5rem 4rem; }
+  .section-inner { max-width: 1200px; margin: 0 auto; }
+  .section-label {
+    font-size: 0.72rem; font-weight: 700; letter-spacing: 0.25em; text-transform: uppercase;
+    color: var(--aqua); margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;
+  }
+  .section-label::before { content: ''; display: block; width: 24px; height: 2px; background: var(--aqua); }
+  .section-title { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 3vw, 2.6rem); color: var(--blue-deep); line-height: 1.15; margin-bottom: 1rem; }
+  .section-title em { color: var(--aqua); font-style: italic; }
+  .section-sub { font-size: 1rem; color: var(--text-mid); line-height: 1.8; max-width: 580px; }
+
+  /* SERVICE DETAIL SECTIONS */
+  .service-section { padding: 4rem 4rem; border-bottom: 1px solid rgba(11,46,78,0.06); }
+  .service-section:last-of-type { border-bottom: none; }
+  .service-section:nth-child(even) { background: var(--cream); }
+  .service-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+  .service-section:nth-child(even) .service-grid { direction: rtl; }
+  .service-section:nth-child(even) .service-grid > * { direction: ltr; }
+  .service-visual {
+    background: linear-gradient(135deg, var(--blue-mid), var(--blue-light));
+    border-radius: 12px; aspect-ratio: 4/3;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 5rem; position: relative; overflow: hidden;
+  }
+  .service-visual::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(circle at 30% 70%, rgba(26,188,156,0.25) 0%, transparent 60%);
+  }
+  .service-tag {
+    position: absolute; top: 1rem; left: 1rem;
+    background: var(--orange); color: #fff; padding: 0.3rem 0.8rem;
+    border-radius: 4px; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  }
+  .service-info h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.6rem, 2.5vw, 2.2rem); color: var(--blue-deep); margin-bottom: 1rem; }
+  .service-info h2 em { color: var(--aqua); font-style: italic; }
+  .service-info p { font-size: 0.9rem; color: var(--text-mid); line-height: 1.8; margin-bottom: 1rem; }
+  .service-list { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin: 1.2rem 0; }
+  .service-list li {
+    display: flex; align-items: center; gap: 0.7rem;
+    font-size: 0.85rem; color: var(--text-mid);
+  }
+  .service-list li::before { content: '✓'; color: var(--aqua); font-weight: 700; flex-shrink: 0; }
+  .btn-primary {
+    background: var(--orange); color: #fff;
+    padding: 0.9rem 2rem; border: none; border-radius: 4px;
+    font-family: 'Montserrat', sans-serif; font-size: 0.85rem; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase; cursor: pointer;
+    text-decoration: none; transition: background 0.2s, transform 0.2s;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+  }
+  .btn-primary:hover { background: var(--orange-dark); transform: translateY(-2px); }
+
+  /* EMERGENCY BANNER */
+  .emergency-banner {
+    background: linear-gradient(135deg, var(--orange-dark), var(--orange));
+    padding: 3rem 4rem; color: white; text-align: center;
+  }
+  .emergency-banner h2 { font-family: 'Playfair Display', serif; font-size: clamp(1.8rem, 3vw, 2.4rem); margin-bottom: 0.5rem; }
+  .emergency-banner p { font-size: 1rem; opacity: 0.85; margin-bottom: 1.5rem; }
+  .btn-white {
+    background: #fff; color: var(--orange-dark); padding: 0.9rem 2rem; border: none;
+    border-radius: 4px; font-family: 'Montserrat', sans-serif; font-size: 0.85rem;
+    font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase;
+    cursor: pointer; text-decoration: none; transition: background 0.2s, transform 0.2s;
+    display: inline-flex; align-items: center; gap: 0.5rem;
+  }
+  .btn-white:hover { background: var(--cream); transform: translateY(-2px); }
+
+  /* WHY QUICK SECTION */
+  .trust-strip {
+    background: var(--blue-deep); padding: 2rem 4rem;
+    display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap;
+  }
+  .trust-item { display: flex; align-items: center; gap: 0.7rem; color: rgba(255,255,255,0.8); font-size: 0.82rem; font-weight: 600; }
+  .trust-item-icon { font-size: 1.2rem; }
+
+  /* FOOTER */
+  footer { background: #061a2e; color: rgba(255,255,255,0.55); padding: 4rem 4rem 2rem; }
+  .footer-inner { max-width: 1200px; margin: 0 auto; }
+  .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; padding-bottom: 3rem; border-bottom: 1px solid rgba(255,255,255,0.06); margin-bottom: 2rem; }
+  .footer-logo { font-family: 'Montserrat', sans-serif; font-size: 1.3rem; font-weight: 800; color: #fff; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.5rem; }
+  .footer-logo span { color: var(--aqua); }
+  .footer-about { font-size: 0.82rem; line-height: 1.8; max-width: 280px; }
+  .footer-license { margin-top: 1rem; font-size: 0.75rem; color: var(--aqua); font-weight: 600; }
+  .footer-col h4 { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 1.2rem; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.6rem; }
+  .footer-col a { color: rgba(255,255,255,0.5); text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--aqua); }
+  .footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.75rem; }
+  .footer-links { display: flex; gap: 2rem; }
+  .footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 0.75rem; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--aqua); }
+
+  /* MOBILE */
+  .mobile-cta-bar { display: none; position: fixed; bottom: 0; left: 0; right: 0; z-index: 200; background: var(--blue-deep); border-top: 2px solid var(--aqua); padding: 0.8rem 1.5rem; gap: 0.8rem; }
+  .mobile-cta-bar a { flex: 1; text-align: center; padding: 0.75rem; border-radius: 6px; font-family: 'Montserrat', sans-serif; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; text-decoration: none; }
+  .mobile-cta-call { background: var(--aqua); color: #fff; }
+  .mobile-cta-quote { background: var(--orange); color: #fff; }
+
+  @media (max-width: 900px) {
+    .topbar, nav, .page-header, .breadcrumb, .service-section, .emergency-banner, .trust-strip, footer { padding-left: 1.5rem; padding-right: 1.5rem; }
+    nav { padding-left: 1.5rem; padding-right: 1.5rem; }
+    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+    .topbar { display: none; }
+    .service-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .service-section:nth-child(even) .service-grid { direction: ltr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+    .mobile-cta-bar { display: flex; }
+    body { padding-bottom: 70px; }
+  }
+  @media (max-width: 600px) {
+    .footer-grid { grid-template-columns: 1fr; }
+    .trust-strip { gap: 1.5rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-left">
+    <span>📍 Sutherland Shire, NSW</span>
+    <span>Mon–Fri 7am–5pm | Sat 8am–2pm</span>
+  </div>
+  <div class="topbar-right">
+    <span class="emergency-badge">24/7 EMERGENCY</span>
+    <a href="tel:+61283570000">📞 (02) 8357 0000</a>
+    <a href="mailto:info@aquastarplumbing.com.au">✉ info@aquastarplumbing.com.au</a>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="logo">
+    <div class="logo-icon">💧</div>
+    Aqua<span>Star</span>
+  </a>
+  <ul class="nav-links">
+    <li class="nav-has-dropdown">
+      <a href="services.html" class="active">Services</a>
+      <ul class="nav-dropdown">
+        <li><a href="#emergency">Emergency Plumbing</a></li>
+        <li><a href="#drains">Blocked Drains</a></li>
+        <li><a href="#hotwater">Hot Water Systems</a></li>
+        <li><a href="#leaks">Leaking Taps & Pipes</a></li>
+        <li><a href="#gas">Gas Fitting</a></li>
+        <li><a href="#bathroom">Bathroom Renovations</a></li>
+        <li><a href="#cctv">CCTV Drain Camera</a></li>
+        <li><a href="#toilets">Toilet Repairs</a></li>
+      </ul>
+    </li>
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#areas">Service Areas</a></li>
+    <li><a href="index.html#reviews">Reviews</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+  </ul>
+  <div class="nav-toggle" onclick="toggleNav()" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-header">
+  <p class="page-header-label">What We Do</p>
+  <h1>Our Plumbing <em>Services</em></h1>
+  <p>From 24/7 emergency callouts to full bathroom renovations — AquaStar covers every plumbing need across Sutherland Shire.</p>
+  <svg class="page-header-waves" viewBox="0 0 1440 50" preserveAspectRatio="none" fill="white">
+    <path d="M0,25 C360,50 1080,0 1440,25 L1440,50 L0,50 Z"/>
+  </svg>
+</div>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb" style="max-width: 100%;">
+  <span style="max-width: 1200px; display: block; margin: 0 auto;">
+    <a href="index.html">Home</a> &rsaquo; Services
+  </span>
+</div>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip">
+  <div class="trust-item"><span class="trust-item-icon">⚡</span> 60-Min Emergency Response</div>
+  <div class="trust-item"><span class="trust-item-icon">📜</span> NSW Licensed</div>
+  <div class="trust-item"><span class="trust-item-icon">💰</span> Fixed Price Quotes</div>
+  <div class="trust-item"><span class="trust-item-icon">✅</span> Workmanship Guarantee</div>
+  <div class="trust-item"><span class="trust-item-icon">🛡️</span> Fully Insured</div>
+</div>
+
+<!-- SERVICE: EMERGENCY -->
+<div class="service-section" id="emergency">
+  <div class="service-grid">
+    <div class="service-visual">
+      🚨
+      <span class="service-tag">24/7 Available</span>
+    </div>
+    <div class="service-info">
+      <div class="section-label">Emergency Callouts</div>
+      <h2>Emergency <em>Plumbing</em></h2>
+      <p>Plumbing emergencies don't keep business hours. When you have a burst pipe, sewage backup, or major leak, every minute counts. AquaStar's emergency team is on call 24 hours a day, 7 days a week.</p>
+      <p>We aim to be at your door within 60 minutes across Sutherland Shire. Our vans are fully stocked with parts and equipment to fix most problems on the spot.</p>
+      <ul class="service-list">
+        <li>Burst pipes & major leaks</li>
+        <li>Sewage overflow & backups</li>
+        <li>No hot water emergencies</li>
+        <li>Flooding & storm water issues</li>
+        <li>Gas leaks (call 000 first, then us)</li>
+        <li>Tree root intrusion into pipes</li>
+      </ul>
+      <a href="contact.html" class="btn-primary">Call Us Now — (02) 8357 0000</a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE: BLOCKED DRAINS -->
+<div class="service-section" id="drains">
+  <div class="service-grid">
+    <div class="service-visual">🔩</div>
+    <div class="service-info">
+      <div class="section-label">Drain Specialists</div>
+      <h2>Blocked <em>Drains</em></h2>
+      <p>Slow draining sinks, gurgling toilets, overflowing stormwater pits — blocked drains are one of the most common plumbing problems. AquaStar uses professional-grade equipment to clear them fast and keep them clear.</p>
+      <p>We use high-pressure water jetting to blast away blockages caused by grease, debris, tree roots and buildup. Our CCTV camera inspection confirms the drain is fully clear before we leave.</p>
+      <ul class="service-list">
+        <li>Kitchen & bathroom sink blockages</li>
+        <li>Blocked shower & floor drains</li>
+        <li>Toilet blockages</li>
+        <li>Stormwater & sewer drain clearing</li>
+        <li>High-pressure water jetting</li>
+        <li>Tree root removal from drains</li>
+        <li>Drain relining (no-dig repair)</li>
+      </ul>
+      <a href="contact.html" class="btn-primary">Book a Drain Clearance →</a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE: HOT WATER -->
+<div class="service-section" id="hotwater">
+  <div class="service-grid">
+    <div class="service-visual">🌡️</div>
+    <div class="service-info">
+      <div class="section-label">Hot Water Specialists</div>
+      <h2>Hot Water <em>Systems</em></h2>
+      <p>We supply, install and repair all types of hot water systems across Sutherland Shire. Whether your existing system has failed or you're upgrading to a more energy-efficient option, we'll recommend the right solution for your home and budget.</p>
+      <p>We work with all major brands including Rheem, Rinnai, Dux, Bosch, Vulcan, Aquamax and AquaMax Solar.</p>
+      <ul class="service-list">
+        <li>Electric hot water systems</li>
+        <li>Gas storage & continuous flow systems</li>
+        <li>Solar hot water systems</li>
+        <li>Heat pump hot water systems</li>
+        <li>Emergency same-day replacements</li>
+        <li>Hot water system repairs & servicing</li>
+        <li>Tempering valve installation & testing</li>
+      </ul>
+      <a href="contact.html" class="btn-primary">Get a Hot Water Quote →</a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE: LEAKING TAPS -->
+<div class="service-section" id="leaks">
+  <div class="service-grid">
+    <div class="service-visual">💧</div>
+    <div class="service-info">
+      <div class="section-label">Leak Detection & Repair</div>
+      <h2>Leaking Taps <em>& Pipes</em></h2>
+      <p>A dripping tap wastes up to 9,000 litres of water per year — and that's just one tap. Hidden pipe leaks can cause structural damage, mould growth and skyrocketing water bills. Don't ignore them.</p>
+      <p>We use non-invasive leak detection technology to find hidden leaks before they become expensive problems.</p>
+      <ul class="service-list">
+        <li>Dripping tap repair & washer replacement</li>
+        <li>Mixer tap & cartridge repair</li>
+        <li>Leaking pipes under floors & walls</li>
+        <li>Shower & bath leaks</li>
+        <li>Leaking garden taps & irrigation</li>
+        <li>Leaking water meters</li>
+        <li>Pipe repair & pipe relining</li>
+      </ul>
+      <a href="contact.html" class="btn-primary">Fix That Leak Today →</a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE: GAS FITTING -->
+<div class="service-section" id="gas">
+  <div class="service-grid">
+    <div class="service-visual">🔥</div>
+    <div class="service-info">
+      <div class="section-label">Licensed Gas Fitters</div>
+      <h2>Gas <em>Fitting</em></h2>
+      <p>Gas work requires a licensed gas fitter — it's not a job for DIY. AquaStar's gas fitters are fully licensed in NSW and handle all residential gas plumbing with safety as the top priority.</p>
+      <p>If you can smell gas, leave the property immediately, call 000, then call us. We'll make your home safe.</p>
+      <ul class="service-list">
+        <li>Gas cooktop installation & connection</li>
+        <li>Gas heater installation & servicing</li>
+        <li>BBQ & outdoor gas point installation</li>
+        <li>Gas leak detection & repair</li>
+        <li>Gas meter upgrades</li>
+        <li>Pressure testing & compliance certificates</li>
+        <li>LPG & natural gas systems</li>
+      </ul>
+      <a href="contact.html" class="btn-primary">Book a Gas Fitter →</a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE: BATHROOM -->
+<div class="service-section" id="bathroom">
+  <div class="service-grid">
+    <div class="service-visual">🛁</div>
+    <div class="service-info">
+      <div class="section-label">Renovation Plumbing</div>
+      <h2>Bathroom <em>Renovations</em></h2>
+      <p>Thinking about a bathroom refresh or full renovation? AquaStar provides complete plumbing fit-out services for bathroom and laundry renovations across Sutherland Shire.</p>
+      <p>We coordinate seamlessly with your tiler, builder or cabinet maker — or we can manage the whole renovation for you from concept to completion.</p>
+      <ul class="service-list">
+        <li>Full bathroom plumbing fit-out</li>
+        <li>Shower installation & relocation</li>
+        <li>Bath installation</li>
+        <li>Toilet relocation & installation</li>
+        <li>Vanity & basin installation</li>
+        <li>Laundry plumbing & tub installation</li>
+        <li>Pipe relocation & rough-in work</li>
+      </ul>
+      <a href="contact.html" class="btn-primary">Get a Reno Quote →</a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE: CCTV -->
+<div class="service-section" id="cctv">
+  <div class="service-grid">
+    <div class="service-visual">📷</div>
+    <div class="service-info">
+      <div class="section-label">Advanced Diagnostics</div>
+      <h2>CCTV Drain <em>Camera</em></h2>
+      <p>Before digging up your yard or drilling into walls, let us look inside your pipes first. Our CCTV drain camera inspection gives a live, high-definition view inside your drain system to identify problems accurately.</p>
+      <p>It's particularly useful for recurring blockages, buying a new home, or diagnosing unexplained smells or slow drainage.</p>
+      <ul class="service-list">
+        <li>Real-time video inspection of drains</li>
+        <li>Locating blockages, cracks & root intrusion</li>
+        <li>Identifying collapsed or offset pipe joins</li>
+        <li>Pre-purchase property inspections</li>
+        <li>Post-blockage clearance verification</li>
+        <li>Full inspection report & footage provided</li>
+        <li>No-dig drain relining where required</li>
+      </ul>
+      <a href="contact.html" class="btn-primary">Book a Camera Inspection →</a>
+    </div>
+  </div>
+</div>
+
+<!-- SERVICE: TOILETS -->
+<div class="service-section" id="toilets">
+  <div class="service-grid">
+    <div class="service-visual">🚽</div>
+    <div class="service-info">
+      <div class="section-label">Toilet Specialists</div>
+      <h2>Toilet Repairs <em>& Installation</em></h2>
+      <p>A constantly running toilet can waste up to 26,000 litres of water a year. Whether it's a cistern that won't stop running, a cracked bowl, a slow-flushing toilet or a full replacement, we fix it quickly at a fixed, upfront price.</p>
+      <ul class="service-list">
+        <li>Running & leaking cistern repair</li>
+        <li>Cistern button & mechanism replacement</li>
+        <li>Cracked toilet pan replacement</li>
+        <li>New toilet supply & installation</li>
+        <li>Toilet relocation</li>
+        <li>Back-to-wall & wall-hung toilets</li>
+        <li>Dual-flush cistern upgrades</li>
+      </ul>
+      <a href="contact.html" class="btn-primary">Book a Toilet Repair →</a>
+    </div>
+  </div>
+</div>
+
+<!-- EMERGENCY BANNER -->
+<div class="emergency-banner">
+  <h2>Plumbing Emergency Right Now?</h2>
+  <p>Don't wait — our 24/7 team is standing by to take your call.</p>
+  <a href="tel:+61283570000" class="btn-white">📞 Call (02) 8357 0000 — We're Ready Now</a>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">💧 Aqua<span>Star</span></div>
+        <p class="footer-about">AquaStar Plumbing Services — Sutherland Shire's trusted local plumbers since 2009. Locally owned, fully licensed and committed to quality on every job.</p>
+        <p class="footer-license">NSW Plumbing Licence #PL123456</p>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#emergency">Emergency Plumbing</a></li>
+          <li><a href="#drains">Blocked Drains</a></li>
+          <li><a href="#hotwater">Hot Water Systems</a></li>
+          <li><a href="#leaks">Leaking Taps</a></li>
+          <li><a href="#gas">Gas Fitting</a></li>
+          <li><a href="#bathroom">Bathroom Renos</a></li>
+          <li><a href="#cctv">CCTV Drain Camera</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service Areas</h4>
+        <ul>
+          <li><a href="index.html#areas">Cronulla</a></li>
+          <li><a href="index.html#areas">Miranda</a></li>
+          <li><a href="index.html#areas">Caringbah</a></li>
+          <li><a href="index.html#areas">Engadine</a></li>
+          <li><a href="index.html#areas">Gymea</a></li>
+          <li><a href="index.html#areas">Kirrawee</a></li>
+          <li><a href="index.html#areas">All Shire Suburbs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+61283570000">(02) 8357 0000</a></li>
+          <li><a href="mailto:info@aquastarplumbing.com.au">info@aquastarplumbing.com.au</a></li>
+          <li><a href="contact.html">Get a Free Quote</a></li>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#reviews">Reviews</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 AquaStar Plumbing Services. All rights reserved. Sutherland Shire, NSW.</span>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="index.html">Home</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-cta-bar">
+  <a href="tel:+61283570000" class="mobile-cta-call">📞 Call Now</a>
+  <a href="contact.html" class="mobile-cta-quote">Get a Quote</a>
+</div>
+
+<script>
+  function toggleNav() {
+    const nl = document.querySelector('.nav-links');
+    nl.style.display = nl.style.display === 'flex' ? 'none' : 'flex';
+    nl.style.flexDirection = 'column';
+    nl.style.position = 'absolute';
+    nl.style.top = '70px';
+    nl.style.left = '0';
+    nl.style.right = '0';
+    nl.style.background = 'white';
+    nl.style.padding = '1rem 1.5rem';
+    nl.style.boxShadow = '0 8px 24px rgba(0,0,0,0.1)';
+    nl.style.zIndex = '300';
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if (el) { e.preventDefault(); el.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
+</body>
+</html>
